@@ -1,4 +1,4 @@
- **ELK Stack** (Elasticsearch, Logstash, and Kibana) does — in a **clear and practical way**:
+What **ELK Stack** (Elasticsearch, Logstash, and Kibana) does — in a **clear and practical way**:
 
 ---
 
