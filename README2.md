@@ -37,11 +37,10 @@ Set Up IAM Role for EKS (if needed):
 Ensure you have the required IAM roles set up for EKS. eksctl can create the necessary roles for 
 you when you create a cluster, but the IAM user you use must have permissions like:
  ```bash
- eks:CreateCluster
-
- eks:DescribeCluster
-
- eks:UpdateClusterConfig
+✓ AmazonEKSClusterPolicy  
+✓ AmazonEKSServicePolicy  
+✓ AmazonEC2FullAccess  
+✓ IAMFullAccess (optional during testing)
  ```
 
 Enter:
