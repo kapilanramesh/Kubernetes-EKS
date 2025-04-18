@@ -7,10 +7,6 @@ Sure! Here’s a detailed README for your **Prometheus + Grafana Monitoring Stac
 ## **Project Overview**
 This project sets up a Prometheus and Grafana monitoring stack on Amazon EKS (Elastic Kubernetes Service) using Helm. The monitoring stack includes Prometheus for collecting metrics and Grafana for visualizing them. The stack is deployed using the Helm chart `prometheus-community/kube-prometheus-stack`, which also includes Alertmanager and various exporters for Kubernetes metrics.
 
-## **Architecture Diagram**
-
-![Prometheus Grafana Architecture](./images/architecture-diagram.png)
-
 ### **Components**
 - **Prometheus**: Open-source monitoring and alerting toolkit designed for reliability and scalability.
 - **Grafana**: Open-source visualization and analytics platform for monitoring data collected by Prometheus.
