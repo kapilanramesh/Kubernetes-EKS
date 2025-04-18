@@ -39,15 +39,51 @@ you when you create a cluster, but the IAM user you use must have permissions li
  ```bash
 ✓ AmazonEKSClusterPolicy  
 ✓ AmazonEKSServicePolicy  
-✓ AmazonEC2FullAccess  
+✓ AmazonEC2FullAccess
+✓ EKSProvisioningMinimalPolicy
 ✓ IAMFullAccess (optional during testing)
  ```
+Customize Policy (EKSProvisioningMinimalPolicy):
+Go to IAM → Policies → Create policy → JSON tab, and paste this:
+```bash
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "eks:*",
+                "ec2:Describe*",
+                "ec2:CreateSecurityGroup",
+                "ec2:CreateTags",
+                "ec2:AuthorizeSecurityGroupIngress",
+                "ec2:AuthorizeSecurityGroupEgress",
+                "ec2:RevokeSecurityGroupEgress",
+                "ec2:DeleteSecurityGroup",
+                "ec2:DeleteTags",
+                "iam:CreateRole",
+                "iam:DeleteRole",
+                "iam:AttachRolePolicy",
+                "iam:PutRolePolicy",
+                "iam:GetRole",
+                "iam:PassRole",
+                "iam:ListRoles",
+                "cloudformation:*",
+                "autoscaling:*",
+                "logs:*"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```             
 
 Enter:
 - Access Key ID
 - Secret Access Key
 - Default region (e.g., ap-south-1)
 - Output format (e.g., json)
+
 
 ### Install `eksctl`
 
